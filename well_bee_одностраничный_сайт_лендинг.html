@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WellBee — сон, питание и забота о себе в одном приложении</title>
+  <meta name="description" content="WellBee — мобильное приложение для здорового сна, питания и психологического благополучия. Локализация для СНГ, freemium и премиум $3–5/мес." />
+  <style>
+    :root{
+      --bg:#0f172a;        /* slate-900 */
+      --panel:#111827;     /* gray-900 */
+      --muted:#94a3b8;     /* slate-400 */
+      --text:#e5e7eb;      /* gray-200 */
+      --brand:#22c55e;     /* green-500 */
+      --brand-2:#4ade80;   /* green-400 */
+      --accent:#fde68a;    /* amber-200 */
+      --card:#0b1224;      
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:linear-gradient(180deg,var(--bg),#0b1329);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1080px;margin:0 auto;padding:0 24px}
+    header{position:sticky;top:0;background:rgba(15,23,42,.7);backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid rgba(255,255,255,.06);z-index:50}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:700}
+    .bee{width:28px;height:28px;border-radius:8px;background:conic-gradient(from 180deg at 50% 50%, var(--brand), var(--brand-2));display:grid;place-items:center;color:#052e16;font-size:18px}
+    .nav a.btn{padding:10px 16px;border-radius:12px;background:var(--brand);color:#052e16;font-weight:700;transition:.2s}
+    .nav a.btn:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(34,197,94,.25)}
+
+    .hero{padding:72px 0 32px;display:grid;gap:28px}
+    .hero h1{font-size:48px;line-height:1.1;margin:0}
+    .hero p{color:var(--muted);font-size:18px;margin:0}
+    .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+    .hero-cta a{padding:12px 18px;border-radius:14px;font-weight:700}
+    .primary{background:var(--brand);color:#052e16}
+    .secondary{border:1px solid rgba(148,163,184,.25)}
+    .mock{border:1px solid rgba(255,255,255,.06);background:linear-gradient(160deg,#0b1222,#0e1329);border-radius:24px;padding:20px;display:grid;gap:12px}
+    .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px}
+
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border:1px solid rgba(148,163,184,.25);border-radius:999px;color:var(--muted);font-size:13px}
+    .tag{background:rgba(34,197,94,.15);color:#a7f3d0;padding:4px 8px;border-radius:999px;font-size:12px;margin-left:auto}
+
+    section{padding:56px 0;border-top:1px solid rgba(255,255,255,.06)}
+    h2{font-size:32px;margin:0 0 8px}
+    .lead{color:var(--muted);margin:0 0 24px}
+
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:18px;padding:18px;display:grid;gap:10px}
+    .card .icon{font-size:22px}
+    .card p{color:var(--muted);margin:0}
+
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .price{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:22px;display:grid;gap:12px}
+    .price h3{margin:0}
+    .price .amount{font-size:34px;font-weight:800;color:var(--brand)}
+    .price ul{margin:0;padding-left:18px;color:var(--muted)}
+
+    .cta{background:radial-gradient(1200px 500px at 50% -200px, rgba(34,197,94,.25), transparent);text-align:center;padding:64px 0}
+    .btn-lg{display:inline-block;margin-top:8px;padding:14px 22px;border-radius:14px;background:var(--brand);color:#052e16;font-weight:800}
+
+    footer{padding:36px 0;color:var(--muted);text-align:center}
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .grid{grid-template-columns:1fr}
+      .cards,.pricing{grid-template-columns:1fr}
+      .hero h1{font-size:36px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo"><span class="bee">🐝</span> WellBee</div>
+      <nav>
+        <a href="#features">Функции</a>&nbsp;&nbsp;
+        <a href="#pricing">Тарифы</a>&nbsp;&nbsp;
+        <a href="#faq">FAQ</a>&nbsp;&nbsp;
+        <a class="btn" href="#waitlist">Ранний доступ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="hero grid">
+      <div>
+        <span class="pill">Локализация для СНГ <span class="tag">ru/kz</span></span>
+        <h1>Сон, питание и психологическая поддержка — в одном приложении</h1>
+        <p>WellBee помогает выстроить устойчивые привычки: анализ сна, дневник питания и короткие практики для снижения стресса. Персональный AI‑ассистент подскажет, что улучшить именно вам.</p>
+        <div class="hero-cta">
+          <a class="primary" href="#waitlist">Получить приглашение</a>
+          <a class="secondary" href="#features">Как это работает</a>
+        </div>
+      </div>
+      <div class="mock">
+        <div class="pill" style="justify-content:space-between;">
+          Ваш день с WellBee <span class="tag">демо</span>
+        </div>
+        <div class="card" style="grid-template-columns:1fr 1fr;gap:12px;align-items:center">
+          <div>
+            <div style="font-weight:700">Сон: 7 ч 45 мин</div>
+            <p>Качество сна: 82/100 · рекомендация: лечь на 30 минут раньше.</p>
+          </div>
+          <div style="text-align:right;font-weight:800;color:var(--brand)">+12 очков здоровья</div>
+        </div>
+        <div class="card">
+          <div style="display:flex;gap:10px;align-items:center"><span>🥗</span><strong>Питание</strong></div>
+          <p>Добавьте 2 порции овощей сегодня. Рецепт дня — «Салат с нутом».</p>
+        </div>
+        <div class="card">
+          <div style="display:flex;gap:10px;align-items:center"><span>🧘‍♀️</span><strong>Психо‑практика</strong></div>
+          <p>Дыхание 4‑7‑8 • 3 минуты. Напоминание в 22:00.</p>
+        </div>
+      </div>
+    </div>
+
+    <section id="features">
+      <h2>Почему WellBee</h2>
+      <p class="lead">Всё необходимое для заботы о себе — без переключения между десятком приложений.</p>
+      <div class="cards">
+        <div class="card">
+          <div class="icon">😴</div>
+          <h3>Трекинг сна</h3>
+          <p>Аналитика продолжительности и качества сна, мягкие рекомендации по режиму и вечерним рутинам.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🥗</div>
+          <h3>Дневник питания</h3>
+          <p>Быстрый учёт приёмов пищи, цели по воде/клетчатке, простые рецепты на каждый день.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🧠</div>
+          <h3>Психологическая поддержка</h3>
+          <p>Микро‑практики, чек‑ин настроения, трекер стресса и техники дыхания.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🤖</div>
+          <h3>AI‑ассистент</h3>
+          <p>Персональные подсказки по вашим данным: «что улучшить сегодня», «как лучше восстановиться».</p>
+        </div>
+        <div class="card">
+          <div class="icon">🎮</div>
+          <h3>Геймификация</h3>
+          <p>Очки здоровья, челленджи, достижения и дружеские соревнования.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🌐</div>
+          <h3>Локализация</h3>
+          <p>Интерфейс на русском и казахском, рекомендации с учётом местной культуры и бюджета.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <h2>Тарифы</h2>
+      <p class="lead">Freemium для старта. Премиум — доступно.</p>
+      <div class="pricing">
+        <div class="price">
+          <h3>Базовый</h3>
+          <div class="amount">Бесплатно</div>
+          <ul>
+            <li>Трекинг сна и питания</li>
+            <li>Еженедельные рекомендации</li>
+            <li>Базовые челленджи</li>
+          </ul>
+        </div>
+        <div class="price" style="border-color:rgba(34,197,94,.45);box-shadow:0 16px 48px rgba(34,197,94,.12)">
+          <h3>Премиум</h3>
+          <div class="amount">$3–5/мес</div>
+          <ul>
+            <li>AI‑советы по вашим данным</li>
+            <li>Расширенная аналитика сна</li>
+            <li>Персональные планы и рецепты</li>
+            <li>Продвинутые челленджи и клуб</li>
+          </ul>
+        </div>
+        <div class="price">
+          <h3>Команда/Семья</h3>
+          <div class="amount">от $8/мес</div>
+          <ul>
+            <li>До 5 аккаунтов</li>
+            <li>Общие челленджи</li>
+            <li>Приватность и роли</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2>Частые вопросы</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Будут ли интеграции с браслетами?</h3>
+          <p>Да, планируем поддержку Apple Health, Google Fit и популярных браслетов.</p>
+        </div>
+        <div class="card">
+          <h3>Нужен ли интернет?</h3>
+          <p>Основной функционал работает офлайн; синхронизация и AI‑подсказки — онлайн.</p>
+        </div>
+        <div class="card">
+          <h3>Как вы храните данные?</h3>
+          <p>Шифрование и анонимизация. Вы контролируете, что делиться и с кем.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="waitlist" class="cta">
+      <h2>Получите ранний доступ</h2>
+      <p class="lead">Мы пришлём приглашение и бонус‑месяц Премиум первым участникам листа ожидания.</p>
+      <form onsubmit="event.preventDefault(); this.reset(); alert('Спасибо! Мы свяжемся по почте.');" style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
+        <input required type="email" placeholder="Ваш email" aria-label="email" style="padding:14px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:#0b1224;color:var(--text);min-width:260px" />
+        <button class="btn-lg" type="submit">Присоединиться</button>
+      </form>
+      <p class="lead" style="font-size:13px;margin-top:10px">Нажимая кнопку, вы соглашаетесь с обработкой данных.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="y"></span> WellBee · Сделано с заботой 🐝 · <a href="mailto:hello@wellbee.app">hello@wellbee.app</a>
+    </div>
+  </footer>
+
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
